@@ -87,6 +87,7 @@ if(isset($_POST["photo_submit"])){
 <head>
     <meta charset="utf-8">
     <title>Veebirakendused ja nende loomine 2021</title>
+    <script src="javascript/checkImageSize.js" defer></script>
 </head>
 
 <body>
@@ -119,9 +120,10 @@ if(isset($_POST["photo_submit"])){
             <input id="privacy_input_3" name="privacy_input" type="radio" value="1">
             <br>
             <br>
-            <input type="submit" name="photo_submit" value="Lae pilt üles!"><span><?php echo $notice; ?></span>
+            <input type="submit" name="photo_submit" id="photo_submit"
+                value="Lae pilt üles!"><span><?php echo $notice; ?></span>
         </form>
-        <p><?php echo $photo_upload_error; echo $notice ?></p>
+        <p id="notice"><?php echo $photo_upload_error; echo $notice ?></p>
 
         <p>Tagasi <a href="home.php">koju</a></p>
     </div>
